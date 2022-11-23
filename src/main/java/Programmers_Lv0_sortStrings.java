@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Programmers_Lv_0_sortStrings {
+public class Programmers_Lv0_sortStrings {
     public static void main(String[] args) {
         String my_string = "hi12392";
         /*
