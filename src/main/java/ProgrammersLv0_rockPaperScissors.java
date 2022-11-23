@@ -19,6 +19,5 @@ public class ProgrammersLv0_rockPaperScissors {
                 answer += String.valueOf('2');
             }
         }
-
     }
 }
