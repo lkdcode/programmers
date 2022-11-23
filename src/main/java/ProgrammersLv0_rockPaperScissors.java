@@ -1,5 +1,5 @@
 
-public class Programmers_Lv0_rockPaperScissors {
+public class ProgrammersLv0_rockPaperScissors {
     public static void main(String[] args) {
         String rsp = "205";
         ///////////////////
