@@ -1,3 +1,5 @@
+package twenty.Three.Day;
+
 public class ProgrammersLv0_Ant {
     public static void main(String[] args) {
         int hp = 23;
