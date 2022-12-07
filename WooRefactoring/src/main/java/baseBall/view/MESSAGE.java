@@ -13,6 +13,7 @@ public enum MESSAGE {
     ERROR_NUMBER_LENGTH("[ERROR] 3자리의 숫자만 입력 가능합니다."),
     ERROR_DUPLICATION_NUMBER("[ERROR] 중복된 숫자는 입력 불가합니다."),
     ERROR_ZERO_NUMBER("[ERROR] 숫자 0은 입력하실 수 없습니다."),
+    ERROR_COMMAND("[ERROR] 숫자 1 또는 2를 입력해주세요."),
     ERROR_COMPUTER_LENGTH("[ERROR] 컴퓨터 숫자가 3자리가 아닙니다."),
     ERROR_COMPUTER_ZERO("[ERROR] 컴퓨터 숫자에 0이 포함됩니다."),
     ERROR_COMPUTER_DUPLICATION("[ERROR] 컴퓨터 숫자가 중복된 숫자를 가지고 있습니다.");
