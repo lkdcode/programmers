@@ -6,12 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComputerNumber {
-    private List<Integer> computerNumbers = new ArrayList<>();
     private final ValidateComputerNumbers VALIDATE_COMPUTER_NUMBERS = new ValidateComputerNumbers();
+    private final int MIN_NUMBER = 1;
+    private final int MAX_NUMBER = 9;
+    private final int LENGTH = 3;
+    private List<Integer> computerNumbers = new ArrayList<>();
 
     public void makeComputerNumbers() {
-        while (computerNumbers.size() < 3) {
-            int randomNumber = Randoms.pickNumberInRange(1, 9);
+        computerNumbers = new ArrayList<>();
+        while (computerNumbers.size() < LENGTH) {
+            int randomNumber = Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER);
             if (!computerNumbers.contains(randomNumber)) {
                 computerNumbers.add(randomNumber);
             }
@@ -23,9 +27,7 @@ public class ComputerNumber {
         VALIDATE_COMPUTER_NUMBERS.validateComputerNumbers(computerNumbers);
     }
 
-    public List<Integer>
-
-    getComputerNumbers() {
+    public List<Integer> getComputerNumbers() {
         return computerNumbers;
     }
 
