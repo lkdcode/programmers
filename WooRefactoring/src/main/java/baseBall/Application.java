@@ -3,11 +3,11 @@ package baseBall;
 import baseBall.controller.SystemController;
 
 public class Application {
+    private static final SystemController BASE_BALL = new SystemController();
 
     public static void main(String[] args) {
 
-        SystemController baseBall = new SystemController();
-        baseBall.play();
+        BASE_BALL.joinTheGame();
 
     }
 }
