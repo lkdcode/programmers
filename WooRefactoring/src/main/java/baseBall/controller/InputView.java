@@ -7,10 +7,10 @@ import static camp.nextstep.edu.missionutils.Console.readLine;
  */
 public class InputView {
     private final ValidateInput VALIDATE_INPUT = new ValidateInput();
+    private final String RETRY_COMMAND = "1";
     private String inputCommand;
     private String inputNumber;
 
-    // 사용자로부터 숫자를 입력받는 메소드
     public void readNumber() {
         inputNumber = readLine();
         VALIDATE_INPUT.validateInputNumber(inputNumber);
@@ -20,9 +20,16 @@ public class InputView {
         return inputNumber;
     }
 
-    // 사용자로부터 재시작,종료 여부를 입력받는 메소드
     public void readCommand() {
         inputCommand = readLine();
+        VALIDATE_INPUT.validateInputCommand(inputCommand);
+    }
+
+    public boolean getRetry() {
+        if (inputCommand.equals(RETRY_COMMAND)) {
+            return true;
+        }
+        return false;
     }
 
 }
