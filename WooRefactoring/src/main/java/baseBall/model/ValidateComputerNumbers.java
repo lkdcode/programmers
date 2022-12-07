@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ValidateComputerNumbers {
+    private final int ZERO = 0;
+    private final int FIRST = 0;
+    private final int SECOND = 1;
+    private final int THIRD = 2;
+    private final int LENGTH = 3;
     private List<Integer> computerNumbers = new ArrayList<>();
 
     public void validateComputerNumbers(List<Integer> computerNumbers) {
@@ -15,23 +20,24 @@ public class ValidateComputerNumbers {
         validateDuplication();
     }
 
-
     private void validateLength() {
-        if (computerNumbers.size() != 3) {
+        if (computerNumbers.size() != LENGTH) {
             System.out.println(MESSAGE.ERROR_COMPUTER_LENGTH.getView());
             throw new IllegalArgumentException();
         }
     }
 
     private void validateZero() {
-        if (computerNumbers.contains(0)) {
+        if (computerNumbers.contains(ZERO)) {
             System.out.println(MESSAGE.ERROR_COMPUTER_ZERO.getView());
             throw new IllegalArgumentException();
         }
     }
 
     private void validateDuplication() {
-        if (computerNumbers.get(0) == computerNumbers.get(1) || computerNumbers.get(0) == computerNumbers.get(2) || computerNumbers.get(1) == computerNumbers.get(2)) {
+        if (computerNumbers.get(FIRST) == computerNumbers.get(SECOND)
+          || computerNumbers.get(FIRST) == computerNumbers.get(THIRD)
+          || computerNumbers.get(SECOND) == computerNumbers.get(THIRD)) {
             System.out.println(MESSAGE.ERROR_COMPUTER_DUPLICATION.getView());
             throw new IllegalArgumentException();
         }
